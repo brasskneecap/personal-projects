@@ -4,13 +4,8 @@ import ShareSVG from './svg-components/ShareSVG.js'
 import Interaction from './Interaction.js'
 import {useEffect, useState} from 'react'
 
-const PostInteraction = () => {
+const PostInteraction = ({ reactions }) => {
     const [hypeClicked, setHypeClicked] = useState(false);
-
-    useEffect(() => {
-        //edit this to be set by redux state
-        //setHypeClicked(hypeClicked);
-    }, [hypeClicked])
 
     function handleHypeClick() {
         setHypeClicked(!hypeClicked);
@@ -27,10 +22,10 @@ const PostInteraction = () => {
 
     return (
         <div className="post-interactions-container">
-            <Interaction component={<HypeSVG color={hypeClicked ? "#F44900" : "#12151D"}/>} typeCount="100" typeText="Hypes" onClickHandler={handleHypeClick} />
-            <Interaction component={<CommentSVG />} typeCount="24" typeText="Comments" onClickHandler={handleCommentClick} />
-            <Interaction component={<ShareSVG />} typeCount="12" typeText="Shares" onClickHandler={handleShareClick} />
-            <Interaction typeCount="100" typeText="Views" />
+            <Interaction component={<HypeSVG color={hypeClicked ? "#F44900" : "#12151D"}/>} typeCount={reactions.hypes} typeText="Hypes" onClickHandler={handleHypeClick} />
+            <Interaction component={<CommentSVG />} typeCount={reactions.comments} typeText="Comments" onClickHandler={handleCommentClick} />
+            <Interaction component={<ShareSVG />} typeCount={reactions.shares} typeText="Shares" onClickHandler={handleShareClick} />
+            <Interaction typeCount={reactions.views} typeText="Views" />
         </div>
     )
 }

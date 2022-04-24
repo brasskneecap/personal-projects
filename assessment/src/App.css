@@ -171,6 +171,7 @@
   background: #006CFA;
   color: white;
   font: poppins;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

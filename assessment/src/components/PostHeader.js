@@ -1,12 +1,12 @@
 import ProfilePicture from "./ProfilePicture"
 
-const PostHeader = ({picture, headerType})=> {
+const PostHeader = ({ post, headerType})=> {
     return (
         <div className={headerType}>
-            <ProfilePicture imgLocation={picture}/>
+            <ProfilePicture imgLocation={post.userOwner.profilePicture}/>
             <div className="titles-container">
                 <div className="primary-title">
-                    Title Here
+                    { post.userOwner.name}
                 </div>
                 <div className="secondary-title">
                     0 Minutes ago
