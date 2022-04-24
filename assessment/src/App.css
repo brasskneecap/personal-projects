@@ -34,6 +34,7 @@ body {
 
 .base-container {
   margin: auto;
+  padding: 30px;
   background-color: white;
   border: 1px solid #CED7E7;
   border-radius: 10px;
@@ -42,7 +43,6 @@ body {
 }
 
 .picture-container {
-  margin: 24px 0px 0px 30px;
   height: 60px;
   width: 60px;
 }
@@ -53,10 +53,13 @@ body {
 
 .post-header {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titles-container {
-  margin-top: 30px;
+  display: inline-block;
+  vertical-align: middle;
   margin-left: 16px;
 }
 
@@ -72,7 +75,7 @@ body {
 }
 
 .post-content {
-  margin: 15px 30px 0px 30px;
+  margin-top: 16px;
 }
 
 .post-content p {
@@ -83,7 +86,7 @@ body {
 }
 
 .post-options {
-  margin: 0px 20px 20px auto;
+  margin: 0px 10px 40px auto;
   height: 20px;
   width: 20px;
   font-weight: 400;
@@ -95,7 +98,6 @@ body {
 
 .post-interactions-container {
   display: flex;
-  margin-left: 30px;
 }
 
 .interaction-content {
@@ -105,7 +107,7 @@ body {
 
 .interaction-icon {
   margin-top: 2px;
-  margin-right: 4px;
+  margin-right: 8px;
   cursor: pointer;
 }
 
@@ -113,14 +115,23 @@ body {
   font-size: 12px;
   font-weight: 500 medium;
   text: strong;
-  margin-right: 2px;
+  margin-right: 4px;
 }
 
 .type-display {
   font-size: 10px;
   font-weight: 400;
-  margin-right: 10px;
+  margin-right: 13px;
   color: var(--color-gray);
+}
+
+.comment-container {
+  display: flex;
+  align-items: center;
+  background: #F1F4F8;
+  border-radius: 100px;
+  height: 40px;
+  margin-top: 15px;
 }
 
 

@@ -27,9 +27,9 @@ const PostInteraction = () => {
 
     return (
         <div className="post-interactions-container">
-            <Interaction component={<HypeSVG color={hypeClicked ? "#F44900" : ""}/>} typeCount="100" typeText="Hypes" onClickHandler={handleHypeClick} />
-            <Interaction component={<CommentSVG />} typeCount="24" typeText="Comment" onClickHandler={handleCommentClick} />
-            <Interaction component={<ShareSVG />} typeCount="12" typeText="Share" onClickHandler={handleShareClick} />
+            <Interaction component={<HypeSVG color={hypeClicked ? "#F44900" : "#12151D"}/>} typeCount="100" typeText="Hypes" onClickHandler={handleHypeClick} />
+            <Interaction component={<CommentSVG />} typeCount="24" typeText="Comments" onClickHandler={handleCommentClick} />
+            <Interaction component={<ShareSVG />} typeCount="12" typeText="Shares" onClickHandler={handleShareClick} />
             <Interaction typeCount="100" typeText="Views" />
         </div>
     )
