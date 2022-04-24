@@ -1,5 +1,10 @@
-.App {
-  text-align: center;
+
+:root {
+  --color-gray: rgba(18, 21, 29, 0.6);
+}
+
+body {
+  background: #E5E5E5;
 }
 
 .App-logo {
@@ -14,7 +19,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +32,66 @@
   color: #61dafb;
 }
 
+.base-container {
+  margin: auto;
+  background-color: white;
+  border: 1px solid #CED7E7;
+  border-radius: 10px;
+  width: 80%;
+  min-height: 200px;
+}
+
+.picture-container {
+  margin: 24px 0px 0px 30px;
+  height: 60px;
+  width: 60px;
+}
+
+.picture-formatter {
+  border-radius: 30px;
+}
+
+.post-header {
+  display: flex;
+}
+
+.titles-container {
+  margin-top: 30px;
+  margin-left: 16px;
+}
+
+.primary-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.secondary-title {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.post-content {
+  margin: 15px 30px 0px 30px;
+}
+
+.post-content p {
+  color: rgba(18, 21, 29, 0.87);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.post-options {
+  margin: 0px 20px 20px auto;
+  height: 20px;
+  width: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-gray);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
