@@ -92,6 +92,38 @@ body {
   cursor: pointer;
   color: var(--color-gray);
 }
+
+.post-interactions-container {
+  display: flex;
+  margin-left: 30px;
+}
+
+.interaction-content {
+  display: flex;
+  align-items: center;
+}
+
+.interaction-icon {
+  margin-top: 2px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.count-display {
+  font-size: 12px;
+  font-weight: 500 medium;
+  text: strong;
+  margin-right: 2px;
+}
+
+.type-display {
+  font-size: 10px;
+  font-weight: 400;
+  margin-right: 10px;
+  color: var(--color-gray);
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

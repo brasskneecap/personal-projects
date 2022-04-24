@@ -1,5 +1,6 @@
 import PostHeader from "./PostHeader"
 import PostContent from "./PostContent";
+import PostInteraction from "./PostInteraction";
 import picture from '../assets/Terran.jpg';
 
 const Post = () => {
@@ -7,8 +8,9 @@ const Post = () => {
 
     return (
         <div>
-            <PostHeader picture={picture} />
+            <PostHeader picture={picture} headerType="post-header"/>
             <PostContent content={content}/>
+            <PostInteraction />
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import ProfilePicture from "./ProfilePicture"
 
-const PostHeader = ({picture})=> {
+const PostHeader = ({picture, headerType})=> {
     return (
-        <div className="post-header">
+        <div className={headerType}>
             <ProfilePicture imgLocation={picture}/>
             <div className="titles-container">
                 <div className="primary-title">
