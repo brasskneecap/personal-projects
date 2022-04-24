@@ -1,9 +1,11 @@
 import Post from "../components/Post"
+import CreatePost from "../components/CreatePost"
+
 const PostPage = () => {
     return (
-        <div className="base-container">
-            <Post>
-            </Post>
+        <div style={{ padding:"20px"}}>
+            <CreatePost />
+            <Post />
         </div>
     )
 }
