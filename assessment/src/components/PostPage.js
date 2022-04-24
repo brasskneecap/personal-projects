@@ -1,5 +1,5 @@
-import Post from "../components/Post"
-import CreatePost from "../components/CreatePost"
+import Post from "./Post"
+import CreatePost from "./CreatePost"
 import { useSelector } from 'react-redux'
 
 const PostPage = () => {

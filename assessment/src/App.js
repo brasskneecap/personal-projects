@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import PostPage from './layouts/PostPage.js'
+import PostPage from './components/PostPage.js'
 
 function App() {
   return (
