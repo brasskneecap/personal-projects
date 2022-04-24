@@ -24,7 +24,8 @@ const CreatePost = (user) => {
                     comments: 0,
                     shares: 0,
                     views: 0
-                }
+                },
+                comments: []
             }
         dispatch({
             type: "ADD_POST",
