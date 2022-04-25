@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostHeader Interaction Snapshot 1`] = `
+<div
+  className="post-header"
+>
+  <ProfilePicture />
+  <div
+    className="titles-container"
+  >
+    <div
+      className="primary-title"
+    >
+      Test User
+    </div>
+    <div
+      className="secondary-title"
+    >
+      0 Minutes ago
+    </div>
+  </div>
+  <div
+    className="post-options"
+  >
+    ...
+  </div>
+</div>
+`;

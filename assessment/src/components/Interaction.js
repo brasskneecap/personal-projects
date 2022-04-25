@@ -1,5 +1,3 @@
-
-
 const Interaction = ({onClickHandler, component, typeCount, typeText}) => {
     return (
         <div className="interaction-content">

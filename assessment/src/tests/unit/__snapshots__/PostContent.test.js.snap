@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostContent Interaction Snapshot 1`] = `
+<div
+  className="post-content"
+>
+  <p>
+    This is a test
+  </p>
+</div>
+`;

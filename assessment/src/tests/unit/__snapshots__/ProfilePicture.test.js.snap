@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePicture Should match ProfilePicture Snapshot 1`] = `
+<div>
+  <div>
+    <img
+      className="picture-formatter"
+      src="Terran.jpg"
+    />
+  </div>
+</div>
+`;
