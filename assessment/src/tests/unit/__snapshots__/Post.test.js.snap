@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post no comments Post Snapshot 1`] = `
+<div
+  className="base-container"
+>
+  <PostHeader
+    headerType="post-header"
+    post={
+      Object {
+        "comments": Array [],
+        "content": "Test message",
+        "id": 1,
+        "reactions": Object {
+          "comments": 0,
+          "hypes": 0,
+          "shares": 0,
+          "views": 0,
+        },
+        "userOwner": Object {
+          "name": "Test User",
+        },
+      }
+    }
+  />
+  <PostContent
+    content="Test message"
+  />
+  <PostInteraction
+    postId={1}
+    reactions={
+      Object {
+        "comments": 0,
+        "hypes": 0,
+        "shares": 0,
+        "views": 0,
+      }
+    }
+  />
+  <AddComment
+    postId={1}
+    type="post"
+  />
+</div>
+`;
+
+exports[`Post with comments Post Snapshot 1`] = `
+<div
+  className="base-container"
+>
+  <PostHeader
+    headerType="post-header"
+    post={
+      Object {
+        "comments": Array [
+          Object {
+            "id": 1,
+          },
+          Object {
+            "id": 2,
+          },
+        ],
+        "content": "Test message",
+        "id": 1,
+        "reactions": Object {
+          "comments": 0,
+          "hypes": 0,
+          "shares": 0,
+          "views": 0,
+        },
+        "userOwner": Object {
+          "name": "Test User",
+        },
+      }
+    }
+  />
+  <PostContent
+    content="Test message"
+  />
+  <PostInteraction
+    postId={1}
+    reactions={
+      Object {
+        "comments": 0,
+        "hypes": 0,
+        "shares": 0,
+        "views": 0,
+      }
+    }
+  />
+  <AddComment
+    postId={1}
+    type="post"
+  />
+  <Comment
+    comment={
+      Object {
+        "id": 1,
+      }
+    }
+    postId={1}
+  />
+  <Comment
+    comment={
+      Object {
+        "id": 2,
+      }
+    }
+    postId={1}
+  />
+</div>
+`;

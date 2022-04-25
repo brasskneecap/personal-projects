@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interaction Interaction Snapshot 1`] = `
+<div
+  className="interaction-content"
+>
+  <div
+    className="interaction-icon"
+    onClick={[Function]}
+  >
+    <CommentSVG />
+  </div>
+  <span
+    className="count-display"
+  >
+    1
+  </span>
+  <span
+    className="type-display"
+  >
+    test
+  </span>
+</div>
+`;
