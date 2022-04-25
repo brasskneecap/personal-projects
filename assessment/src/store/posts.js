@@ -34,7 +34,6 @@ const initialState = {
 }
 
 function postsReducer(state = initialState, action) {
-    console.log(action)
     switch (action.type) {
         case 'ADD_POST': {
             return {
@@ -43,6 +42,76 @@ function postsReducer(state = initialState, action) {
                     ...state.posts,
                     action.payload
                 ]
+            }
+        }
+        case 'HYPE_POST': {
+            let {id} = action.payload;
+            return {
+                ...state,
+                posts: state.posts.map(
+                    (post) => post.id === id ? {
+                        ...post,
+                        reactions: {
+                            ...post.reactions,
+                            hypes: post.reactions.hypes + 1
+                        }
+                    } : post
+                )
+            }
+        }
+        case 'UNHYPE_POST': {
+            let {id} = action.payload;
+            return {
+                ...state,
+                posts: state.posts.map(
+                    (post) => post.id === id ? {
+                        ...post,
+                        reactions: {
+                            ...post.reactions,
+                            hypes: post.reactions.hypes - 1
+                        }
+                    } : post
+                )
+            }
+        }
+        case 'HYPE_COMMENT': {
+            let { postId, commentId } = action.payload;
+            return {
+                ...state,
+                posts: state.posts.map(
+                    (post) => post.id === postId ? {
+                        ...post,
+                        comments: post.comments.map(
+                            (comment) => comment.id === commentId ? {
+                                ...comment,
+                                reactions: {
+                                    ...comment.reactions,
+                                    hypes: comment.reactions.hypes + 1
+                                }
+                            } : comment
+                        )
+                    } : post
+                )
+            }
+        }
+        case 'UNHYPE_COMMENT': {
+            let { postId, commentId } = action.payload;
+            return {
+                ...state,
+                posts: state.posts.map(
+                    (post) => post.id === postId ? {
+                        ...post,
+                        comments: post.comments.map(
+                            (comment) => comment.id === commentId ? {
+                                ...comment,
+                                reactions: {
+                                    ...comment.reactions,
+                                    hypes: comment.reactions.hypes - 1
+                                }
+                            } : comment
+                        )
+                    } : post
+                )
             }
         }
         case 'ADD_COMMENT': {

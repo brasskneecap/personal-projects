@@ -30,15 +30,12 @@ const AddComment = ({postId, type}) => {
             }
         }
         setIncrementer(incrementer + 1)
-        console.log(type)
-        console.log(postId)
         if(type === "post") {
             dispatch({
                 type: "ADD_COMMENT",
                 payload: { id: postId, comment}
             })
         } else {
-            console.log("comment clicked on comment")
         }
 
     }
