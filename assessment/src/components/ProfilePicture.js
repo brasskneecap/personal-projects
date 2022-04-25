@@ -1,7 +1,7 @@
 const ProfilePicture = ({imgLocation}) => {
     return (
         <div>
-            <div className="picture-container">
+            <div>
                 <img className="picture-formatter" src={imgLocation} />
             </div>
         </div>
