@@ -2,14 +2,26 @@ import HypeSVG from './svg-components/HypeSVG.js'
 import CommentSVG from './svg-components/CommentSVG.js'
 import ShareSVG from './svg-components/ShareSVG.js'
 import Interaction from './Interaction.js'
-import {useEffect, useState} from 'react'
+import { useDispatch } from "react-redux"
+import {useState} from 'react'
 
-const PostInteraction = ({ reactions }) => {
+const PostInteraction = ({ reactions, postId }) => {
     const [hypeClicked, setHypeClicked] = useState(false);
+    const dispatch = useDispatch();
 
     function handleHypeClick() {
+        if(!hypeClicked) {
+            dispatch({
+                type: "HYPE_POST",
+                payload: { id: postId}
+            })
+        }else {
+            dispatch({
+                type: "UNHYPE_POST",
+                payload: { id: postId}
+            })
+        }
         setHypeClicked(!hypeClicked);
-        console.log('handleHypeClick');
     }
 
     function handleCommentClick() {
