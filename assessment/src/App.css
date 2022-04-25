@@ -38,9 +38,14 @@
   width: 60%;
 }
 
-.picture-container {
-  height: 60px;
-  width: 60px;
+.comment-section {
+  margin: auto;
+  margin-top: 16px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #CED7E7;
+  border-radius: 10px;
+  width: 95%;
 }
 
 .picture-formatter {
@@ -51,6 +56,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.divider {
+  margin: auto;
+  border: .5px solid #CED7E7;
+  width: 100%;
+  margin-top: 16px;
 }
 
 .titles-container {
