@@ -7,7 +7,7 @@ const initialState = {
         //         name: "Terran",
         //         profilePicture: picture
         //     },
-        //     content: "Here's a story all about how my life got flipped turned upside down. I'd like to take a minute just sit right there all tell you all about how I slapped Chris Rock and kept my wifes name out of his mouth",
+        //     content: "comment content",
         //     reactions: {
         //         hypes: 98,
         //         comments: 20,
@@ -21,7 +21,7 @@ const initialState = {
                 //         name: ""
                 //         profilePicture: picture
                 //     }
-                //     content: "Here's a story all about how my life got flipped turned upside down. I'd like to take a minute just sit right there all tell you all about how I slapped Chris Rock and kept my wifes name out of his mouth",
+                //     content: "comment content",
                 //     reactions: {
                 //         hypes: 98,
                 //         comments: 20,
