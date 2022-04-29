@@ -24,7 +24,7 @@ const AddComment = ({postId, type}) => {
             },
             content: message,
             reactions: {
-                hypes: 0,
+                hypes: 100,
                 comments: 0,
                 shares: 0
             }
