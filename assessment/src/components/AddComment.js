@@ -41,6 +41,7 @@ const AddComment = ({postId, type}) => {
         }
 
         setMessage("")
+        setIsActive(false)
     }
 
     const handleKeyPress = (e) => {
@@ -84,7 +85,7 @@ const AddComment = ({postId, type}) => {
         return (
             <div className="comment-container-active">
                 <input autoFocus  value={message} placeholder="Add comment" className="comment-input" onFocus={handleFocus} onBlur={handleBlur} onKeyPress={handleKeyPress} onChange={handleInputChange} />
-                <div style={{ marginLeft:"auto", marginRight:"11px", cursor:"pointer"}} onClick={handleCommentSubmit}>
+                <div style={{ marginLeft:"auto", marginRight:"11px", cursor:"pointer"}} onMouseDown={(e) => e.preventDefault()} onClick={handleCommentSubmit}>
                     <span>Post</span>
                 </div>
             </div>
