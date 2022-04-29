@@ -199,34 +199,31 @@
   cursor: pointer;
 }
 
-.hype-background:hover {
-  background-color: rgba(244, 73, 0, 0.3);
+@media(hover: hover) {
+  .hype-background:hover svg path,
+  .hype-background:hover{
+    fill:red;
+    color:red;
+    background-color: rgba(244, 73, 0, 0.3);
+  }
 }
 
-.hype-background:hover svg path,
-.hype-background:hover{
-  fill:red;
-  color:red;
-}
-
-.hype-background-clicked {
-  background-color: #F44900;
-}
-
+.hype-background-clicked,
 .hype-background-clicked svg path {
   fill: #FFFFFF;
   color: #FFFFFF;
+  background-color: #F44900;
 }
 
-.hype-background-clicked:hover {
-  background-color: rgba(244, 73, 0, 0.3);
-}
 
-.hype-background-clicked:hover svg path {
-  fill:red;
-  color:red;
+@media(hover: hover) {
+  .hype-background-clicked:hover,
+  .hype-background-clicked:hover svg path {
+    fill:red;
+    color:red;
+    background-color: rgba(244, 73, 0, 0.3);
+  }
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
