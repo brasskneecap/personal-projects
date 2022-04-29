@@ -124,8 +124,13 @@
 }
 
 .interaction-icon {
-  margin-top: 2px;
-  margin-right: 8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
   cursor: pointer;
 }
 
@@ -139,7 +144,7 @@
 .type-display {
   font-size: 10px;
   font-weight: 400;
-  margin-right: 13px;
+  margin-right: 8px;
   color: var(--color-gray);
 }
 
@@ -192,6 +197,34 @@
   color: white;
   font: poppins;
   cursor: pointer;
+}
+
+.hype-background:hover {
+  background-color: rgba(244, 73, 0, 0.3);
+}
+
+.hype-background:hover svg path,
+.hype-background:hover{
+  fill:red;
+  color:red;
+}
+
+.hype-background-clicked {
+  background-color: #F44900;
+}
+
+.hype-background-clicked svg path {
+  fill: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.hype-background-clicked:hover {
+  background-color: rgba(244, 73, 0, 0.3);
+}
+
+.hype-background-clicked:hover svg path {
+  fill:red;
+  color:red;
 }
 
 @keyframes App-logo-spin {
