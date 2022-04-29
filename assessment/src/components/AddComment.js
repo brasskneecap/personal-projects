@@ -10,6 +10,8 @@ const AddComment = ({postId, type}) => {
     const user = useSelector((state) => state.user)
     const [incrementer, setIncrementer] = useState(1)
     const [message, setMessage] = useState("")
+    const [isHovered, setIsHovered] = useState(false)
+    const [isActive, setIsActive] = useState(false)
 
     const handleInputChange = (e) => {
         setMessage(e.target.value)
@@ -44,18 +46,53 @@ const AddComment = ({postId, type}) => {
     const handleKeyPress = (e) => {
         if(e.key === "Enter") {
             handleCommentSubmit()
+            setIsActive(false)
         }
     }
 
+    const handleMouseEnter = () => {
+        setIsHovered(true)
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false)
+    }
+
+    const handleFocus = () => {
+        setIsActive(true)
+    }
+
+    const handleBlur = () => {
+        setIsActive(false)
+        setIsHovered(false)
+    }
+
+    function commentDisplay() {
+        if(!isHovered && !isActive)
+            return (
+                <div className="comment-container">
+                    <div style={{ marginLeft:"16px", marginTop:"5px"}}>
+                    <CommentSVG height="18" width="18" />
+                    </div>
+                    <input placeholder="Add comment" className="comment-input" />
+                    <div style={{ marginTop:"5px", marginLeft:"auto", marginRight:"11px", cursor:"pointer"}}>
+                        <SubmitSVG />
+                    </div>
+                </div>
+            )
+
+        return (
+            <div className="comment-container-active">
+                <input autoFocus  value={message} placeholder="Add comment" className="comment-input" onFocus={handleFocus} onBlur={handleBlur} onKeyPress={handleKeyPress} onChange={handleInputChange} />
+                <div style={{ marginLeft:"auto", marginRight:"11px", cursor:"pointer"}} onClick={handleCommentSubmit}>
+                    <span>Post</span>
+                </div>
+            </div>
+        )
+    }
     return (
-        <div className="comment-container">
-            <div style={{ marginLeft:"16px", marginTop:"5px"}}>
-                <CommentSVG height="18" width="18" />
-            </div>
-            <input value={message} placeholder="Add comment" className="comment-input" onKeyPress={handleKeyPress} onChange={handleInputChange} />
-            <div style={{ marginTop:"5px", marginLeft:"auto", marginRight:"11px", cursor:"pointer"}} onClick={handleCommentSubmit}>
-                <SubmitSVG />
-            </div>
+        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {commentDisplay()}
         </div>
     )
 }

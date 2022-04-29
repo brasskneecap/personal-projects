@@ -160,6 +160,28 @@
   margin-top: 15px;
 }
 
+.comment-container-active {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #006CFA;
+  border-radius: 100px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.comment-container-active span{
+  font-family: poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #006CFA;
+}
+
+.comment-container-active input{
+  background: #FFFFFF;
+}
+
 .comment-input {
   margin-left: 10px;
   background: #F1F4F8;
@@ -169,11 +191,11 @@
   font-size: 14px;
   font-family: poppins;
   height: 25px;
-  width: 100%;
+  width: 80%;
 }
 
 .create-post-input {
-  height: 50px;
+  height: 30px;
   width: 97%;
   padding-left: 20px;
   font-family: poppins;
