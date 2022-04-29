@@ -205,28 +205,18 @@
 @media(hover: hover) and (pointer: fine) {
   .hype-background:hover svg path,
   .hype-background:hover{
-    fill:red;
-    color:red;
     background-color: rgba(244, 73, 0, 0.3);
+    fill: #F44900;
   }
 }
 
-.hype-background-clicked,
-.hype-background-clicked svg path {
+.hype-background:active,
+.hype-background:active svg path {
   fill: #FFFFFF;
-  color: #FFFFFF;
   background-color: #F44900;
 }
 
 
-@media(hover: hover) and (pointer: fine) {
-  .hype-background-clicked:hover,
-  .hype-background-clicked:hover svg path {
-    fill:red;
-    color:red;
-    background-color: rgba(244, 73, 0, 0.3);
-  }
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
