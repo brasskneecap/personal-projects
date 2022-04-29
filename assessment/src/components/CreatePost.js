@@ -28,15 +28,22 @@ const CreatePost = (user) => {
             type: "ADD_POST",
             payload: post
         })
+        setMessage("")
     }
 
     const handleInputChange = (e) => {
         setMessage(e.target.value)
     }
 
+    const handleKeyPress = (e) => {
+        if(e.key === "Enter") {
+            handleCreatePost()
+        }
+    }
+
     return (
         <div className="base-container ">
-            <input className="create-post-input" placeholder="What's on your mind?" onChange={handleInputChange}/>
+            <input className="create-post-input" placeholder="What's on your mind?" value={message} onChange={handleInputChange} onKeyPress={handleKeyPress}/>
             <div className="create-post-footer">
                 <Interaction component={<CameraSVG />} typeCount="Add Media"/>
                 <Interaction component={<VideoSVG />} typeCount="Go Live"/>

@@ -38,6 +38,13 @@ const AddComment = ({postId, type}) => {
         } else {
         }
 
+        setMessage("")
+    }
+
+    const handleKeyPress = (e) => {
+        if(e.key === "Enter") {
+            handleCommentSubmit()
+        }
     }
 
     return (
@@ -45,7 +52,7 @@ const AddComment = ({postId, type}) => {
             <div style={{ marginLeft:"16px", marginTop:"5px"}}>
                 <CommentSVG height="18" width="18" />
             </div>
-            <input value={message} placeholder="Add comment" className="comment-input" onChange={handleInputChange} />
+            <input value={message} placeholder="Add comment" className="comment-input" onKeyPress={handleKeyPress} onChange={handleInputChange} />
             <div style={{ marginTop:"5px", marginLeft:"auto", marginRight:"11px", cursor:"pointer"}} onClick={handleCommentSubmit}>
                 <SubmitSVG />
             </div>
