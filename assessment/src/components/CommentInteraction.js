@@ -34,7 +34,7 @@ const CommentInteraction = ({ reactions, postId, commentId }) => {
 
     return (
         <div className="post-interactions-container">
-            <Interaction component={<HypeSVG color={!hypeClicked && reactions.hypes > 99 ? "#F44900" : "#12151D"} />} reactionClass={hypeClicked ? "hype-background-clicked" : "hype-background"} typeCount={reactions.hypes} typeText="Hypes" onClickHandler={handleHypeClick} />
+            <Interaction component={<HypeSVG color={hypeClicked ? "#F44900" : "#12151D"}/>} reactionClass={"hype-background"} typeCount={reactions.hypes} typeText="Hypes" onClickHandler={handleHypeClick} />
             <Interaction component={<CommentSVG />} typeCount={reactions.comments} typeText="Comments" onClickHandler={handleCommentClick} />
             <Interaction component={<ShareSVG />} typeCount={reactions.shares} typeText="Shares" onClickHandler={handleShareClick} />
         </div>
