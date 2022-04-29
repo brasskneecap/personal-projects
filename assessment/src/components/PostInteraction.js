@@ -38,7 +38,7 @@ const PostInteraction = ({ reactions, postId }) => {
             <Interaction component={<CommentSVG />} typeCount={reactions.comments} typeText="Comments" onClickHandler={handleCommentClick} />
             <Interaction component={<ShareSVG />} typeCount={reactions.shares} typeText="Shares" onClickHandler={handleShareClick} />
             <div className="interaction-content">
-                <span className="count-display">{reactions.views}</span><span className="type-display">Views</span>
+                <span className="count-display view-display">{reactions.views}</span><span className="type-display">Views</span>
             </div>
         </div>
     )
