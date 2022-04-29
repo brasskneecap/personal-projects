@@ -36,6 +36,7 @@
   border: 1px solid #CED7E7;
   border-radius: 10px;
   width: 60%;
+  max-width: 600px;
 }
 
 .comment-section {
