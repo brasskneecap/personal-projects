@@ -31,11 +31,11 @@
 .base-container {
   margin: auto;
   margin-top: 16px;
-  padding: 30px;
+  padding: 15px;
   background-color: white;
   border: 1px solid #CED7E7;
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
   max-width: 600px;
 }
 
@@ -144,8 +144,11 @@
 .type-display {
   font-size: 10px;
   font-weight: 400;
-  margin-right: 8px;
   color: var(--color-gray);
+}
+
+.view-display {
+  margin-left: 14px;
 }
 
 .comment-container {
